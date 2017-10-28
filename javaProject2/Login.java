@@ -16,8 +16,8 @@ class Login{
 			in.givestudentsdetails(count,input.next());
 			//System.out.println("please enter students attendance");
 			//in.givestudentsattendance(count,input.nextInt());
-			System.out.println("please enter cgpa of student");
-			in.givestudentscgpa(count,input.nextDouble());
+			//System.out.println("please enter cgpa of student");
+			//in.givestudentscgpa(count,input.nextDouble());
 			count=count+1;
 			System.out.print("do you want to proceed 1/0");
 			proceed=input.nextInt();
