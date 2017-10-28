@@ -1,17 +1,16 @@
 import java.util.*;
 import java.io.*;
 class Faculty{
-	int n;
 	Scanner s;
 	Faculty(){
-	System.out.println("1.java\n2.dsa\n3.dc");
-	n=s.nextInt();
+	s=new Scanner(System.in);
 	}
-	public void choose(){
+	public void choose(int n){
 		if (n==1){
 				int count=1;
 				FacultyJava fj=new FacultyJava();
 				while(count<6){
+						System.out.println("enter th details of student of number"+count);
 						System.out.println("enter attendance");
 						fj.inputstudentsattendance(count,s.nextInt());
 						System.out.println("enter periodical1 marks");

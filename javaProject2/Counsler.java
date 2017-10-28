@@ -15,18 +15,31 @@ class Counsler{
 			fj=new FacultyJava();
 			fd=new FacultyDsa();
 			fc=new FacultyDc();
+			try{
+			 fis=new FileInputStream("java.txt");
+				 ois=new ObjectInputStream(fis);
+					 fj= (FacultyJava)ois.readObject();
+			 fis=new FileInputStream("Dsa.txt");
+				 ois=new ObjectInputStream(fis);
+					 fd=(FacultyDsa)ois.readObject();
+			 fis=new FileInputStream("Dc.txt");
+		 		ois=new ObjectInputStream(fis);
+					 fc=(FacultyDc)ois.readObject();
+					}catch(Exception e){
+						
+					}
 		}
 	protected void calculatecgpa(){
 		try{
-		 fis=new FileInputStream("java.txt");
+		/* fis=new FileInputStream("java.txt");
 		 ois=new ObjectInputStream(fis);
-	 fj= (FacultyJava)ois.readObject();
+			 fj= (FacultyJava)ois.readObject();
 		fis=new FileInputStream("Dsa.txt");
 		 ois=new ObjectInputStream(fis);
-	 fd=(FacultyDsa)ois.readObject();
+	 		fd=(FacultyDsa)ois.readObject();
 		 fis=new FileInputStream("Dc.txt");
 		 ois=new ObjectInputStream(fis);
-	 fc=(FacultyDc)ois.readObject();
+			 fc=(FacultyDc)ois.readObject();*/
 		while(count<6){
 		int java=fj.students_marks.get(count);
 		int dsa=fd.	students_marks.get(count);

@@ -10,12 +10,13 @@ class Students {
 	FacultyJava fj;
 	FacultyDsa fd;
 	FacultyDc fc;
-	Counsellor con;
-	Students(){
+	Counsler con;
+	Students(int rollnumber){
 		try{
 		fis=new FileInputStream("Students_list.txt");
 		 ois=new ObjectInputStream(fis);
-		Input out=(Input)ois.readObject();
+		Input ou=(Input)ois.readObject();
+		System.out.println("Welcome "+ou.students_list.get(rollnumber));
 	}catch(Exception e){
 
 		}
@@ -117,8 +118,14 @@ class Students {
 
 	}
 	public void checkcgpa(int rollnumber){
-		con=new Counsellor();
+		try{
+		fis=new FileInputStream("cgpa.txt");
+		ois=new ObjectInputStream(fis);
+		con=(Counsler)ois.readObject();
 		double cgpa=con.studentscgpa(rollnumber);
 		System.out.println("Cgpa= "+cgpa);
+	}catch(Exception e){
+
+	}
 	}
 }
