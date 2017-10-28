@@ -1,0 +1,3 @@
+class FacultyDsa extends FacultyJava{
+	
+}
