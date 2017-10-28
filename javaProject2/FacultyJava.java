@@ -1,11 +1,13 @@
+import java.io.*;
+import java.util.*;
 class FacultyJava implements Serializable{
 		HashMap<Integer,Integer> students_attendance;
 		HashMap<Integer,Integer> students_marks;
-		HashMap<Integer,Strings> students_performance;
-		HashMap<Integer,Strings> students_behavior;
+		HashMap<Integer,String> students_performance;
+		HashMap<Integer,String> students_behavior;
 		HashMap<Integer,Integer> students_periodical1;
 		HashMap<Integer,Integer>  students_periodical2;
-	FacultyJava{
+	FacultyJava(){
 		students_attendance=new HashMap<Integer,Integer>();
 		students_marks=new HashMap<Integer,Integer>();
 		students_performance=new HashMap<Integer,String>();
@@ -42,11 +44,11 @@ class FacultyJava implements Serializable{
 			students_attendance.put(number,attendance);
 	}
 	protected void modifyperformance(int number,String performance){
-			students_at.remove(number);
-			students_attendance.put(number,performance);
+			students_performance.remove(number);
+			students_performance.put(number,performance);
 	}
 	protected void modifybehavior(int number,String behaviour){
-			students_attendance.remove(number);
-			students_attendance.put(number,behaviour);
+			students_behavior.remove(number);
+			students_behavior.put(number,behaviour);
 	}
 }
