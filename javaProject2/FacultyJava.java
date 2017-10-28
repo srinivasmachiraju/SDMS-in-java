@@ -15,7 +15,7 @@ class FacultyJava implements Serializable{
 		students_periodical1=new HashMap<Integer,Integer>();
 		students_periodical2=new HashMap<Integer,Integer>();
 	}
-	protected void inputstudentsmarks(int number,int attendance){
+	protected void inputstudentsattendance(int number,int attendance){
 			students_attendance.put(number,attendance);
 	}
 
@@ -31,7 +31,7 @@ class FacultyJava implements Serializable{
 	protected void inputperiodical2marks(int number,int p2){
 			students_periodical2.put(number,p2);
 	}
-	protected void inputstudentsattendance(int number,int marks){
+	protected void inputstudentsmarks(int number,int marks){
 			marks=(int)marks/2;
 			int p1=students_periodical1.get(number);
 			int p2=students_periodical2.get(number);

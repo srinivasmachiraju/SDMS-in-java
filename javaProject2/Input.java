@@ -7,7 +7,7 @@ class Input implements Serializable{
 	
 	Input(){
 		students_list=new HashMap<Integer,String>();
-		students_attendance=new HashMap<Integer,Integer>();
+	//	students_attendance=new HashMap<Integer,Integer>();
 		// students_cgpa=new HashMap<Integer,Double>();
 		}
 	public void givestudentsdetails(int number,String name){
